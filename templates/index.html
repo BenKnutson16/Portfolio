@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+        <section class="header">
+            <h1>Ben Knutson</h1>
+            <p>I love coding!</p>
+            <a><img src="{{ url_for('static', filename='python.jpg') }}" alt="Closeup of a python" border="0"></a>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm an aspiring Python Developer eager to get some real world experience, expand my knowledge, and hone my programming skills.
+                I spend much of my life studying physics, but recently jumped into the deep end with Treehouse Techdegree on a mission to become a developer.
+                I hope to always challenge myself and continue learning new languages and skills so that I can become a full stack developer.
+            </p>
+            <div id="triangle1"></div>
+            <div id="triangle2"></div>
+        </section>
+        <section id="skills">
+            <i class="fas fa-laptop-code"></i>
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>Flask</li>
+                <li>SQLAlchemy</li>
+                <li>GitHub</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>MatLab</li>
+                <li>Excel</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <div id="triangle3"></div>
+            <i class="fas fa-file-code"></i>
+            <h2>Projects</h2>
+            <div id="project-list">
+                {% for project in projects %}
+                    <div id="project_card" class="a-project">
+                        <a href="{{ url_for('detail', project_id=project.id) }}" class="h3">{{ project.title }}</a>
+                        <a href="{{ project.link }}" class="github-btn">
+                            <i class="fab fa-github"></i>
+                            View on GitHub
+                        </a>
+                        <p>
+                            {{ project.description }}
+                        </p>
+                        <p>
+                            Skills: {{ project.skills }}
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+            <div id="triangle4"></div>
+        </section>
+        <section id="contact">
+            <i class="fas fa-paper-plane"></i>
+            <h2>Contact Me</h2>
+            <p>
+                Thanks for checking out my portfolio website! Feel free to reach out for business or employment purposes via my email!
+            </p>
+            <p style="text-align:center">
+                <i class="fas fa-envelope"></i>
+                BenKnutsonWork@gmail.com
+            </p>
+        </section>
+{% endblock %}

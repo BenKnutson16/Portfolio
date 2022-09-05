@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+        <section class="header">
+            <h1>Ben Knutson</h1>
+            <p>Python Developer</p>
+            <img src="{{ url_for('static', filename='keyboard.jpg') }}" alt="Closeup of keyboard">
+        </section>
+        <section id="about-page">
+            <div id="triangle7"></div>
+            <div id="triangle8"></div>
+            <h2>About Me:</h2>
+            <p>
+                I spent much of my life studying Physics, and now I'm jumping into the world of Computer Science!
+                I learned a ton in the past few months in the Treehouse Techdegree program and I can't wait to get my first real programming job.
+                I want to keep learning and improving my skills so that I can be a full stack developer.
+                Thanks for checking out my portfolio website!
+            </p>
+            <p>
+
+            </p>
+            <!--<a href="#"><i class="far fa-file"></i>Resume</a>-->
+        </section>
+        {% endblock %}
