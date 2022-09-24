@@ -36,6 +36,8 @@ def new_project():
     return render_template('projectform.html', projects=projects)
 
 
+# Disabled edit and delete functionality for live website
+'''
 @app.route('/projects/<project_id>/edit', methods=['GET', 'POST'])
 def edit(project_id):
     projects = Project.query.all()
@@ -57,6 +59,7 @@ def delete(project_id):
     db.session.delete(project)
     db.session.commit()
     return redirect(url_for('index'))
+'''
 
 
 @app.route('/about')
