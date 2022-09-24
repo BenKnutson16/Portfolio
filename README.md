@@ -1,6 +1,6 @@
-Project #5: Portfolio with SQLAlchemy
-
-This is my fifth project for Treehouse Techdegree. I used flask and sqlalchemy to create a digital portfolio.
+# Portfolio with SQLAlchemy
+Treehouse Techdegree Project #5
+For this project I used flask and sqlalchemy to create a digital portfolio.
 I learned a lot about how HTML, CSS, and python can work together to create a functional and stylish website.
 
 In order to run this project locally:
